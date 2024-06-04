@@ -103,7 +103,7 @@ app.post("/desktopnewlogfile", (req, res) => {
         fs.access("/opt/render/desktop/LogFiles", (error) => {
             if (error) {
                 // fs.mkdir(path, { recursive: true }, (error) => {     // This Try creating main folders also if not available
-                fs.mkdir(path, (error) => {
+                fs.mkdir("/opt/render/desktop/LogFiles", (error) => {
                     if (error) {
                         console.log(error);
                     } else {
