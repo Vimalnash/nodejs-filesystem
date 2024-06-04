@@ -99,7 +99,8 @@ app.post("/desktopnewlogfile", (req, res) => {
     const fileContent = `CurrentTimeStamp : ${Date.now().toString()}`;
 
     try {
-        fs.access(path, (error) => {
+        // fs.access(path, (error) => {
+        fs.access("/opt/render/desktop/LogFiles", (error) => {
             if (error) {
                 // fs.mkdir(path, { recursive: true }, (error) => {     // This Try creating main folders also if not available
                 fs.mkdir(path, (error) => {
