@@ -1,3 +1,5 @@
+Note: Post Request is accessible when loaded the files in local server and using Post-man / installed server access eligible Only
+
 Render Base URL
     -> https://nodejs-filesystem-236k.onrender.com
 
@@ -12,15 +14,21 @@ Render EndPoint URL Details
         => LogFileName Format -> mmm-dd-yyyy-hh-mm-ss.txt
         => This is working in local server only atpresent using Post-man in http://localhost:8080/newlogfile
 
-   GetFileList from desktop LogFiles Folder created at first create file 
+
+Following is to Creating Folder if not exists and creating log files :
+     (Refer code declared as path - line 70 and used in fs.mkdir);
+
+   GetFileList from desktop LogFiles Folder which is created at first api hit
         => https://nodejs-filesystem-236k.onrender.com/desktopshowlogfiles
         => Displays file list from the configured folder which done in backend nodejs
+        => This is working in local server only atpresent using Post-man in http://localhost:8080/desktopshowlogfiles
 
    CreateNewFile - Which also creates LogFiles Folder in Desktop if not exist and then create log text files
         => https://nodejs-filesystem-236k.onrender.com/desktopnewlogfile
         => Creates New text file with current datetime and content with current timestamp
         => LogFileName Format -> mmm-dd-yyyy-hh-mm-ss.txt
-        => This is working in local server only atpresent using Post-man in http://localhost:8080/newlogfile
+        => This is working in local server only atpresent using Post-man in http://localhost:8080/desktopnewlogfile
+
 
 Github Repository URL
     -> https://github.com/Vimalnash/nodejs-filesystem.git
